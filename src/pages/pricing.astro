@@ -1,0 +1,276 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'PBXly Pricing',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Pricing"
+    title="Transparent Pricing for Every Business"
+    subtitle="Choose the perfect PBX plan that aligns with your communication needs."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Our pricing plans"
+    subtitle="Only pay for what you need"
+    prices={[
+      {
+        title: 'Starter',
+        subtitle: 'Perfect for small businesses',
+        price: 29,
+        period: 'per month',
+        items: [
+          {
+            description: 'Up to 5 extensions',
+          },
+          {
+            description: 'Auto-attendant',
+          },
+          {
+            description: 'Basic call routing',
+          },
+          {
+            description: 'Voicemail with email notifications',
+          },
+          {
+            description: 'Mobile app access',
+          },
+          {
+            description: 'Email support',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '/contact',
+        },
+      },
+      {
+        title: 'Professional',
+        subtitle: 'Ideal for growing businesses',
+        price: 69,
+        period: 'Per Month',
+        items: [
+          {
+            description: 'Up to 20 extensions',
+          },
+          {
+            description: 'Advanced call routing',
+          },
+          {
+            description: 'Conference calling',
+          },
+          {
+            description: 'Call recording',
+          },
+          {
+            description: 'Analytics dashboard',
+          },
+          {
+            description: 'CRM integration',
+          },
+          {
+            description: 'Priority support',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '/contact',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'Enterprise',
+        subtitle: 'For large organizations',
+        price: 199,
+        period: 'Per Month',
+        items: [
+          {
+            description: 'Unlimited extensions',
+          },
+          {
+            description: 'Multi-site management',
+          },
+          {
+            description: 'Advanced analytics',
+          },
+          {
+            description: 'Custom integrations',
+          },
+          {
+            description: 'Dedicated support',
+          },
+          {
+            description: 'SLA guarantee',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '/contact',
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Why choose PBXly pricing"
+    subtitle="Discover the advantages of our transparent pricing model"
+    columns={2}
+    items={[
+      {
+        title: 'No Hidden Fees',
+        description: 'Transparent pricing with no setup fees, hidden charges, or surprise bills. Pay only for what you use.',
+        icon: 'tabler:receipt',
+      },
+      {
+        title: 'Flexible Scaling',
+        description: 'Start small and scale up as your business grows. Add extensions instantly without long-term contracts.',
+        icon: 'tabler:arrow-up',
+      },
+      {
+        title: 'Secure Billing',
+        description: 'Enterprise-grade security for all payment processing with multiple payment options available.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Instant Setup',
+        description: `Get started immediately with our cloud-based system. No hardware installation or waiting required.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Easy Upgrades',
+        description: 'Upgrade your plan anytime to unlock more features and capabilities as your needs evolve.',
+        icon: 'tabler:chevrons-up',
+      },
+      {
+        title: '24/7 Support',
+        description: 'Questions answered via live chat, email or phone, every calendar day.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Getting started with PBXly is simple"
+    tagline="Simple setup process"
+    isReversed={true}
+    items={[
+      {
+        title: 'Choose your plan',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Sign up online',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Configure your system',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Add your team',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: 'Set up call flows',
+        icon: 'tabler:number-5',
+      },
+      {
+        title: 'Go live',
+        icon: 'tabler:number-6',
+      },
+      {
+        title: 'Start making calls',
+        icon: 'tabler:number-7',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'PBXly Setup Process',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Pricing FAQs"
+    subtitle="Choosing the right PBX plan is important, and we are here to answer your questions. If you have queries about our pricing options, you are in the right place."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What is included in the monthly fee?',
+        description:
+          'Your monthly fee includes all PBX features, unlimited internal calls, mobile apps, web interface, and support. You only pay extra for external call minutes if you exceed your plan is included minutes.',
+      },
+      {
+        title: 'Can I change my plan anytime?',
+        description:
+          'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we will prorate any billing adjustments.',
+      },
+      {
+        title: 'Are there any setup fees?',
+        description:
+          'No setup fees! PBXly is designed to be simple and cost-effective. You pay only the monthly subscription fee for your chosen plan.',
+      },
+      {
+        title: 'What happens if I exceed my plan limits?',
+        description:
+          "If you exceed your plan extension or minute limits, we will automatically upgrade you to the next tier or charge overage fees at competitive rates.",
+      },
+      {
+        title: 'Do you offer volume discounts?',
+        description:
+          'Yes, we offer volume discounts for businesses with 50+ extensions. Contact our sales team for custom pricing tailored to your needs.',
+      },
+      {
+        title: 'Is there a free trial available?',
+        description:
+          'Yes, we offer a 30-day free trial on all plans. No credit card required to start your trial. You can upgrade to a paid plan anytime during the trial.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Free Trial',
+        href: '/contact',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to&nbsp;Get&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Started?</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Join thousands of businesses that have already transformed their communication with PBXly. <br class="hidden md:inline" />
+      Start your free trial today!
+    </Fragment>
+  </CallToAction>
+</Layout>

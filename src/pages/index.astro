@@ -1,0 +1,395 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'PBXly — Modern PBX Solution for Business Communication',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: '/contact',
+        icon: 'tabler:phone',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'PBXly Hero Image' }}
+  >
+    <Fragment slot="title">
+      Modern <span class="hidden xl:inline">PBX solution for</span>
+      <span class="text-accent dark:text-white"> Business Communication</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">PBXly</span> is a modern, cloud-based PBX solution that streamlines business communication with advanced features like call management, voicemail, and unified communications.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">PBXly: Modern PBX Solution.</span>
+      Perfect for Small Business, Enterprise, Remote Teams, Call Centers, and any organization looking to enhance their communication infrastructure.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Our Mission:" description="Simplify Business Communication with Advanced Technology" />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you get with PBXly"
+    subtitle="A comprehensive PBX solution designed for modern businesses. Streamline your communication with advanced features that boost productivity and reduce costs."
+    items={[
+      {
+        title: 'Advanced Call Management',
+        description:
+          'Route calls intelligently, set up call forwarding, and manage multiple extensions with our intuitive call management system.',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Voicemail & Auto-Attendant',
+        description:
+          'Professional voicemail system with auto-attendant to greet callers and direct them to the right department or person.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Unified Communications',
+        description:
+          'Integrate voice, video, messaging, and collaboration tools in one platform for seamless team communication.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Mobile & Remote Ready',
+        description:
+          'Access your business phone system from anywhere with mobile apps and web-based interfaces for remote work.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Analytics & Reporting',
+        description:
+          "Track call metrics, monitor performance, and gain insights into your communication patterns with detailed analytics.",
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Scalable & Reliable',
+        description:
+          'Start small and grow as your business expands. Our cloud-based solution scales with your needs and ensures 99.9% uptime.',
+        icon: 'tabler:cloud',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Why PBXly"
+    title="PBXly's Technology: Built for Modern Business!"
+    items={[
+      {
+        title: 'Cloud-Based Infrastructure',
+        description:
+          'Built on reliable cloud technology ensuring high availability, security, and seamless updates without downtime.',
+      },
+      {
+        title: 'Advanced Security',
+        description:
+          'Enterprise-grade security with encryption, secure protocols, and compliance with industry standards.',
+      },
+      {
+        title: 'Easy Integration',
+        description:
+          'Integrate with your existing CRM, helpdesk, and business tools for a unified workflow experience.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'PBXly Technology',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built for the modern workplace</h3>
+      Leverage cutting-edge technology to transform your business communication
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Customizable Solutions',
+        description: `Tailor PBXly to match your business needs with customizable features, call flows, and branding options.`,
+      },
+      {
+        title: 'Multiple Deployment Options',
+        description:
+          'Choose from cloud-hosted, hybrid, or on-premise solutions to match your infrastructure and security requirements.',
+      },
+      {
+        title: '24/7 Support',
+        description:
+          "Get expert support whenever you need it with our dedicated team of PBX specialists and comprehensive documentation.",
+      },
+      {
+        title: 'Cost-Effective Pricing',
+        description:
+          'Transparent pricing with no hidden fees. Pay only for what you use with flexible plans that grow with your business.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'PBXly Solutions',
+    }}
+  >
+    <Fragment slot="content">Ensure your communication system truly represents your business.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Enhanced Team Collaboration',
+        description:
+          'Boost team productivity with features like conference calling, team messaging, and shared contact management.',
+      },
+      {
+        title: 'Continuous Innovation',
+        description:
+          'Stay ahead with regular updates, new features, and improvements based on customer feedback and industry trends.',
+      },
+      {
+        title: 'Quick Implementation',
+        description:
+          'Get up and running in minutes with our simple setup process and comprehensive onboarding support.',
+      },
+      {
+        title: 'Expert Support Team',
+        description: `Our dedicated support team is here to help you succeed with personalized assistance and training.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'PBXly Team',
+    }}
+  >
+    <Fragment slot="content">Designed to foster business growth and success.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Get your PBX system up and running in no time with PBXly."
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Sign Up</span>',
+        description:
+          "Start your journey with PBXly! Create your account and choose the plan that best fits your business needs. Our simple onboarding process gets you started in minutes.",
+        icon: 'tabler:user-plus',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Configure</span>',
+        description:
+          "Set up your phone system with our intuitive configuration tools. Add extensions, set up call flows, and customize your auto-attendant to match your business.",
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Go Live</span>',
+        description:
+          'Start making and receiving calls with your new PBX system. Our team is here to support you every step of the way.',
+        icon: 'tabler:phone-call',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'PBXly Setup',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Key PBX Features"
+    subtitle="Comprehensive features designed to meet all your business communication needs"
+    tagline="Features"
+    items={[
+      {
+        title: 'Call Routing',
+        description: "Intelligent call routing ensures calls reach the right person or department every time.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Voicemail',
+        description:
+          "Professional voicemail system with email notifications and mobile access for never-missed messages.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Conference Calling',
+        description:
+          'Host professional conference calls with multiple participants and advanced audio controls.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Call Recording',
+        description:
+          "Record important calls for training, compliance, or quality assurance purposes.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Mobile Apps',
+        description:
+          'Take your business phone with you anywhere with our mobile apps for iOS and Android.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Analytics',
+        description: 'Track call metrics, monitor performance, and gain insights into your communication patterns.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Auto-Attendant',
+        description: 'Professional greeting system that directs callers to the appropriate department or person.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Integration',
+        description:
+          'Seamlessly integrate with your CRM, helpdesk, and other business tools for unified workflows.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Security',
+        description: "Enterprise-grade security with encryption and compliance with industry standards.",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Learn more about PBXly in our Blog"
+    information={`Our blog provides insights into modern business communication, PBX technology, and tips for optimizing your phone system.
+                        Each article offers valuable information to help you make the most of your PBXly system and improve your business communication.
+                        Stay updated with the latest features and best practices.
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Get answers to common questions about PBXly and how it can transform your business communication."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What is PBXly?',
+        description:
+          "PBXly is a modern, cloud-based Private Branch Exchange (PBX) solution that helps businesses streamline their communication systems. It provides advanced features like call management, voicemail, auto-attendant, and unified communications.",
+      },
+      {
+        title: 'How does PBXly work?',
+        description:
+          'PBXly operates in the cloud, eliminating the need for expensive on-premise hardware. Calls are routed through our secure cloud infrastructure, providing reliability and scalability for businesses of all sizes.',
+      },
+      {
+        title: 'What features does PBXly include?',
+        description:
+          "PBXly includes advanced call routing, voicemail with email notifications, auto-attendant, conference calling, call recording, mobile apps, analytics, and seamless integration with popular business tools.",
+      },
+      {
+        title: "Is PBXly suitable for small businesses?",
+        description:
+          "Absolutely! PBXly is designed to scale with your business. Start with a few extensions and add more as you grow. Our flexible pricing ensures you only pay for what you need.",
+      },
+      {
+        title: 'How secure is PBXly?',
+        description:
+          "PBXly uses enterprise-grade security with encryption, secure protocols, and compliance with industry standards. Your calls and data are protected with the highest level of security.",
+      },
+      {
+        title: 'What kind of support do you provide?',
+        description:
+          "We provide 24/7 technical support, comprehensive documentation, video tutorials, and personalized onboarding to ensure you get the most out of your PBXly system.",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Businesses Served', amount: '2,500+' },
+      { title: 'Calls Per Day', amount: '50K+' },
+      { title: 'Uptime', amount: '99.9%' },
+      { title: 'Customer Satisfaction', amount: '98%' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started Today',
+        href: '/contact',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to&nbsp;Transform&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Your Communication?</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Join thousands of businesses that have already upgraded their communication system with PBXly. <br class="hidden md:inline" />
+      Start your free trial today!
+    </Fragment>
+  </CallToAction>
+</Layout>

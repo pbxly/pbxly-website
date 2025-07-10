@@ -1,0 +1,181 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About PBXly',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About PBXly"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'PBXly Team',
+    }}
+  >
+    <Fragment slot="title">
+      Transforming business communication with <br />
+      <span class="text-accent dark:text-white"> Modern PBX Technology</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      PBXly was founded with a simple mission: to make professional business communication accessible to companies of all sizes. We believe that every business deserves enterprise-level phone system features without the complexity and cost of traditional solutions.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="PBXly by the numbers"
+    stats={[
+      { title: 'Businesses Served', amount: '2,500+' },
+      { title: 'Calls Per Day', amount: '50K+' },
+      { title: 'Uptime', amount: '99.9%' },
+      { title: 'Customer Satisfaction', amount: '98%' }
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Our PBX Solutions"
+    subtitle="We offer comprehensive PBX solutions designed to meet the unique needs of different business types and sizes."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      { title: 'Small Business PBX', description: 'Perfect for businesses with 5-50 employees. Features include auto-attendant, basic call routing, voicemail, and mobile apps.', icon: 'tabler:building' },
+      { title: 'Enterprise PBX', description: 'Advanced solutions for large organizations with complex communication needs, multi-site management, and detailed analytics.', icon: 'tabler:building-skyscraper' },
+      { title: 'Call Center PBX', description: 'Specialized for high-volume call environments with call queuing, agent monitoring, and performance analytics.', icon: 'tabler:phone-call' }
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      { title: 'Remote Work PBX', description: 'Designed for distributed teams with mobile-first features, web-based interfaces, and collaboration tools.', icon: 'tabler:device-mobile' },
+      { title: 'Healthcare PBX', description: 'HIPAA-compliant solutions with secure messaging, emergency call handling, and patient privacy protection.', icon: 'tabler:stethoscope' },
+      { title: 'Multi-Location PBX', description: 'Centralized management for businesses with multiple offices, unified numbering, and location-specific routing.', icon: 'tabler:map-pin' },
+      { title: 'Cloud-Based Infrastructure', description: 'No hardware required, automatic updates, 99.9% uptime guarantee, and unlimited scalability.', icon: 'tabler:cloud' },
+      { title: 'Advanced Security', description: 'Enterprise-grade security with encryption, secure protocols, and compliance with industry standards.', icon: 'tabler:shield-lock' },
+      { title: '24/7 Support', description: 'Expert support team available around the clock with comprehensive documentation and personalized assistance.', icon: 'tabler:headset' }
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'PBXly Technology',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our values"
+    subtitle="At PBXly, we are guided by core values that shape everything we do, from product development to customer support."
+    items={[
+      {
+        title: 'Customer-Centric Approach',
+        description:
+          'We put our customers first in everything we do. Your success is our success, and we are committed to providing solutions that truly meet your business needs.',
+      },
+      {
+        title: 'Innovation & Excellence',
+        description:
+          'We continuously innovate to stay ahead of industry trends and deliver cutting-edge PBX technology that exceeds expectations.',
+      },
+      {
+        title: 'Reliability & Trust',
+        description:
+          'We understand that your business communication is critical. That is why we maintain 99.9% uptime and provide enterprise-grade security you can trust.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our achievements"
+    subtitle="Since our founding, PBXly has achieved significant milestones in transforming business communication technology."
+    isReversed={true}
+    callToAction={{
+      text: 'Get Started',
+      href: '/contact',
+    }}
+    items={[
+      {
+        title: 'Global Reach',
+        description: 'Serving businesses across 25+ countries with our cloud-based PBX solutions, making professional communication accessible worldwide.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Customer Satisfaction',
+        description:
+          'Maintaining a 98% customer satisfaction rate through exceptional support, reliable technology, and continuous improvement.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Industry Recognition',
+        description:
+          'Recognized as a leader in cloud PBX technology with multiple industry awards and certifications for excellence in business communication.',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Our locations"
+    tagline="Find us"
+    columns={4}
+    items={[
+      {
+        title: 'United States',
+        description: '1234 Business Ave, Suite 100, San Francisco, CA 94105',
+      },
+      {
+        title: 'United Kingdom',
+        description: '5678 Tech Street, London, UK EC2A 4NE',
+      },
+      {
+        title: 'Australia',
+        description: '9012 Lorem Ipsum St, 90123, Sydney',
+      },
+      {
+        title: 'Brazil',
+        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Technical Support"
+    tagline="Contact us"
+    columns={2}
+    items={[
+      {
+        title: 'Chat with us',
+        description:
+          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Call us',
+        description:
+          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>
