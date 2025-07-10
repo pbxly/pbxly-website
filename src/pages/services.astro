@@ -7,7 +7,7 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Services',
+  title: 'PBX Services',
 };
 ---
 
@@ -16,73 +16,73 @@ const metadata = {
 
   <Hero
     tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    title="Transform your business communication with our comprehensive PBX solutions"
+    subtitle="Explore our range of cloud-based PBX services designed to meet the unique needs of businesses of all sizes. From basic call management to enterprise-level solutions, we provide the tools you need to succeed."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Get Started', href: '/contact' }]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'PBXly Services',
     }}
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+    title="Explore our comprehensive PBX services"
+    subtitle="Discover our range of solutions designed to streamline and enhance your business communication."
     columns={3}
     items={[
       {
-        title: 'Educational',
+        title: 'Small Business PBX',
         description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
+          'Perfect for businesses with 5-50 employees. Features include auto-attendant, basic call routing, voicemail, and mobile apps for professional communication.',
+        icon: 'tabler:building',
       },
       {
-        title: 'Interior Design',
+        title: 'Enterprise PBX',
         description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
+          'Advanced solutions for large organizations with complex communication needs, multi-site management, detailed analytics, and custom workflows.',
+        icon: 'tabler:building-skyscraper',
       },
       {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
+        title: 'Call Center PBX',
+        description: `Specialized for high-volume call environments with call queuing, agent monitoring, performance analytics, and quality assurance tools.`,
+        icon: 'tabler:phone-call',
       },
       {
-        title: 'E-commerce',
+        title: 'Remote Work PBX',
         description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
+          'Designed for distributed teams with mobile-first features, web-based interfaces, softphones, and collaboration tools for seamless remote communication.',
+        icon: 'tabler:device-mobile',
       },
       {
-        title: 'Blog',
+        title: 'Healthcare PBX',
         description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
+          'HIPAA-compliant solutions with secure messaging, emergency call handling, integration with medical systems, and patient privacy protection.',
+        icon: 'tabler:stethoscope',
       },
       {
-        title: 'Business',
+        title: 'Multi-Location PBX',
         description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
+          'Centralized management for businesses with multiple offices, unified numbering, location-specific routing, and consistent communication across all sites.',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Branding',
+        title: 'Cloud Infrastructure',
         description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
+          'No hardware required, automatic updates, 99.9% uptime guarantee, unlimited scalability, and enterprise-grade security.',
+        icon: 'tabler:cloud',
       },
       {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
+        title: '24/7 Support',
+        description: `Expert support team available around the clock with comprehensive documentation, video tutorials, and personalized assistance.`,
+        icon: 'tabler:headset',
       },
       {
-        title: 'Fashion Design',
+        title: 'Integration Services',
         description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
+          'Seamlessly integrate with your existing CRM, helpdesk, and business tools for unified workflows and enhanced productivity.',
+        icon: 'tabler:plug',
       },
     ]}
   />
@@ -93,37 +93,37 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'High-Quality Designs',
+        title: 'Advanced Call Management',
         description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
+          'Intelligent call routing, auto-attendant, call forwarding, and professional voicemail with email notifications.',
+        icon: 'tabler:phone',
       },
       {
-        title: 'Customization Tools',
+        title: 'Mobile Integration',
         description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
+          'Take your business phone with you anywhere with our mobile apps for iOS and Android, providing full PBX functionality on any device.',
+        icon: 'tabler:device-mobile',
       },
       {
-        title: 'Pre-Designed Elements',
+        title: 'Conference Calling',
         description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
+          'Host professional conference calls with multiple participants, advanced audio controls, and recording capabilities.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Preview and Mockup Views',
+        title: 'Analytics & Reporting',
         description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
+          'Track call metrics, monitor performance, and gain insights into your communication patterns with detailed analytics.',
+        icon: 'tabler:chart-bar',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
+      alt: 'PBX Features',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Core Features</h3>
     </Fragment>
   </Content>
 
@@ -133,33 +133,33 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Time Savings',
+        title: 'Cost Savings',
         description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'Professional Appearance',
-        description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Cost-Efficiency',
-        description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
+          'Eliminate expensive hardware costs, reduce maintenance expenses, and pay only for what you use with our flexible pricing.',
         icon: 'tabler:coin',
       },
       {
-        title: 'Instant Download',
+        title: 'Professional Communication',
         description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
+          'Present a professional image to your customers with auto-attendant, professional voicemail, and seamless call handling.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Scalability',
+        description:
+          'Start small and grow as your business expands. Add extensions instantly without hardware installation or configuration delays.',
+        icon: 'tabler:arrow-up',
+      },
+      {
+        title: 'Reliability',
+        description:
+          'Enjoy 99.9% uptime guarantee with enterprise-grade security, automatic backups, and redundant infrastructure.',
+        icon: 'tabler:shield-check',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
+      alt: 'PBX Benefits',
     }}
   >
     <Fragment slot="content">
@@ -170,42 +170,36 @@ const metadata = {
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Words from real customers"
+    title="What our customers say"
     testimonials={[
       {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        testimonial: `PBXly transformed our business communication completely. The auto-attendant and call routing features have made us sound more professional, and our customers love the seamless experience. The mobile app allows our team to work from anywhere.`,
         name: 'Emily Kennedy',
-        job: 'Front-end developer',
+        job: 'Office Manager',
         image: {
           src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
           alt: 'Emily Kennedy Image',
         },
       },
       {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        testimonial: `As a small business owner, I was worried about the complexity of PBX systems. PBXly made it incredibly simple to set up and manage. The cost savings compared to traditional phone systems are significant, and the features are exactly what we needed.`,
         name: 'Sarah Hansen',
-        job: 'Photographer',
+        job: 'Small Business Owner',
         image: {
           src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
           alt: 'Sarah Hansen Image',
         },
       },
       {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        testimonial: `The analytics and reporting features have given us valuable insights into our call patterns and customer interactions. PBXly's support team is exceptional - they helped us configure everything perfectly for our multi-location business.`,
         name: 'Mark Wilkinson',
-        job: 'Small business owner',
+        job: 'Operations Director',
         image: {
           src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
           alt: 'Mark Wilkinson Image',
         },
       },
     ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
   />
 
   <!-- CallToAction Widget *********** -->
@@ -214,11 +208,19 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
+        text: 'Get Started Today',
+        href: '/contact',
+        icon: 'tabler:phone',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
-  />
+  >
+    <Fragment slot="title">
+      Ready to&nbsp;Transform&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Your Communication?</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Join thousands of businesses that have already upgraded their communication system with PBXly. <br class="hidden md:inline" />
+      Start your free trial today!
+    </Fragment>
+  </CallToAction>
 </Layout>

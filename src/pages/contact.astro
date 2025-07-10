@@ -5,19 +5,19 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact PBXly',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contact" title="Let's Get Started!" />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Ready to transform your business communication?"
+    subtitle="Get in touch with our team to learn more about PBXly or start your free trial. Our experts are here to help you find the perfect solution for your business."
     inputs={[
       {
         type: 'text',
@@ -29,49 +29,59 @@ const metadata = {
         name: 'email',
         label: 'Email',
       },
+      {
+        type: 'text',
+        name: 'company',
+        label: 'Company',
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        label: 'Phone',
+      },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Tell us about your communication needs',
     }}
     disclaimer={{
       label:
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="Our team typically responds within 2 business hours."
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    title="We're here to help!"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: 'Sales & Demo',
+        description: `Chat with us to learn more about PBXly features, pricing plans, or to schedule a personalized demo of our PBX system.`,
       },
       {
-        title: 'Contact sales',
+        title: 'Technical Support',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          'Get help with setup, configuration, troubleshooting, or any technical questions about your PBXly system.',
       },
       {
-        title: 'Technical support',
+        title: 'Account Management',
         description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+          'Assistance with billing, plan changes, user management, or any account-related questions.',
       },
       {
         title: 'Phone',
-        description: '+1 (234) 567-890',
+        description: '+1 (800) 123-4567',
         icon: 'tabler:headset',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'hello@pbxly.com',
         icon: 'tabler:mail',
       },
       {
         title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        description: '1234 Business Ave, Suite 100, San Francisco, CA 94105',
         icon: 'tabler:map-pin',
       },
     ]}
