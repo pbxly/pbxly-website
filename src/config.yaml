@@ -11,7 +11,7 @@ metadata:
   title:
     default: PBXly
     template: '%s — PBXly'
-  description: "🚀 Modern PBX solution for businesses of all sizes. Streamline your communication with our advanced phone system features, call management, and unified communications platform."
+  description: "Modern PBX solution for businesses of all sizes. Streamline your communication with our advanced phone system features, call management, and unified communications platform."
   robots:
     index: true
     follow: true

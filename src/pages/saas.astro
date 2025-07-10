@@ -1,0 +1,343 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+
+import { headerData } from '~/navigation';
+import FAQs from '~/components/widgets/FAQs.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'PBXly SaaS PBX Platform',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Login',
+          href: '#',
+        },
+        {
+          variant: 'primary',
+          text: 'Sign Up',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Cloud PBX for Modern Businesses"
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Start Free Trial', href: '/contact' },
+      { text: 'See Features', href: '#features' },
+    ]}
+    image={{
+      src: '~/assets/images/hero-image.png',
+      alt: 'PBXly SaaS PBX Platform',
+    }}
+  >
+    <Fragment slot="title">
+      Transform Your Business Communication<br />
+      with <span class="text-accent dark:text-white">PBXly Cloud PBX</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        PBXly delivers a secure, scalable, and feature-rich cloud PBX platform for businesses of all sizes.</span>
+      Empower your team with advanced call routing, mobile access, analytics, and seamless integrations—all in the cloud.
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Why choose PBXly SaaS PBX?"
+    subtitle="Powerful features to modernize your business communication."
+    columns={2}
+    items={[
+      {
+        title: 'Cloud-Based PBX',
+        description: 'No hardware required—manage your phone system from anywhere with a secure, cloud-based platform.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Advanced Call Routing',
+        description: 'Customizable call flows, auto-attendant, and intelligent routing for efficient business communication.',
+        icon: 'tabler:phone-call',
+      },
+      {
+        title: 'Mobile & Remote Access',
+        description: 'Empower your team to work from anywhere with mobile apps and web-based calling.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Real-Time Analytics',
+        description: 'Monitor call activity, track performance, and gain insights with powerful analytics dashboards.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Integrations',
+        description: 'Connect PBXly with your CRM, helpdesk, and productivity tools for seamless workflows.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: '24/7 Support',
+        description: 'Our expert support team is available around the clock to assist your business.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Use cases"
+    subtitle="See how PBXly SaaS PBX transforms business communication for different industries."
+    isReversed
+    items={[
+      {
+        title: 'For Startups & SMBs',
+        description:
+          'Launch with a professional phone system in minutes. PBXly helps startups and small businesses look big, stay connected, and scale easily—no IT team required.',
+      },
+      {
+        title: 'Benefits:',
+        description: `Affordable plans, instant setup, and mobile access. <br /> Project a professional image with auto-attendant and call routing. <br /> Grow your system as your business expands.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&auto=format&fit=crop&w=1671&q=80',
+      alt: 'PBXly for Startups',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Startup success stories: <br /><span class="text-2xl">Launching with PBXly</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent={true}
+    items={[
+      {
+        title: 'For Remote & Distributed Teams',
+        description: `Keep your team connected wherever they are. PBXly's cloud PBX enables remote work, mobile calling, and collaboration tools for modern businesses.`,
+      },
+      {
+        title: 'Benefits:',
+        description: `Mobile and web apps for on-the-go access. <br /> Secure, reliable communication from any location. <br /> Easy management of distributed teams and call flows.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1658&q=80',
+      alt: 'PBXly for Remote Teams',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Remote work success: <br /><span class="text-2xl">Empowering distributed teams</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'For Multi-Location Businesses',
+        description: `Unify communication across all your offices. PBXly provides centralized management, location-specific routing, and unified phone numbers for multi-site organizations.`,
+      },
+      {
+        title: 'Benefits:',
+        description: `Centralized admin dashboard. <br /> Consistent experience for all locations. <br /> Flexible call routing and reporting.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'PBXly for Multi-Location Businesses',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Multi-location success: <br /><span class="text-2xl">Unified business communication</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    items={[
+      {
+        title: 'For Enterprises',
+        description: `Enterprise-grade PBX features, security, and reliability. PBXly supports high call volumes, custom integrations, and advanced analytics for large organizations.`,
+      },
+      {
+        title: 'Benefits:',
+        description: `SLA-backed uptime. <br /> Dedicated support. <br /> Customizable to your enterprise needs.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80',
+      alt: 'PBXly for Enterprises',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Enterprise success: <br /><span class="text-2xl">Scalable, secure PBX for large organizations</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Pricing Widget ******************* -->
+
+  <Pricing
+    title="PBXly SaaS PBX Pricing"
+    prices={[
+      {
+        title: 'Starter',
+        subtitle: 'Perfect for small businesses',
+        price: 29,
+        period: '/ month',
+        callToAction: {
+          target: '_blank',
+          text: 'Start Free Trial',
+          href: '/contact',
+        },
+      },
+      {
+        title: 'Professional',
+        subtitle: 'Advanced features for growing teams',
+        price: 69,
+        period: '/ month',
+        callToAction: {
+          target: '_blank',
+          text: 'Get Started',
+          href: '/contact',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'Enterprise',
+        subtitle: 'Custom solutions for large organizations',
+        price: 199,
+        period: '/ month',
+        callToAction: {
+          target: '_blank',
+          text: 'Contact Sales',
+          href: '/contact',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="PBXly SaaS PBX FAQs"
+    items={[
+      {
+        title: 'What is PBXly SaaS PBX?',
+        description: 'PBXly is a cloud-based PBX platform that provides advanced business phone system features without the need for on-premise hardware.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Can I use PBXly for remote teams?',
+        description: 'Yes! PBXly is designed for remote and distributed teams, offering mobile and web access from anywhere.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Is PBXly secure?',
+        description: 'Absolutely. PBXly uses enterprise-grade security, encryption, and compliance with industry standards to protect your communication.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'How do I get started?',
+        description: 'Contact our team for a free trial or demo. We’ll help you set up your PBXly account and configure your system in minutes.',
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Reach out to us"
+    subtitle="Have questions? Contact PBXly for a personalized demo or support. We're here to help!"
+    callToAction={{
+      text: 'Contact us',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'Email us',
+        description: 'contact@pbxly.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Call us',
+        description: '+1 (234) 567-890',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Follow us',
+        description: '@pbxly',
+        icon: 'tabler:brand-twitter',
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Stay informed with PBXly's blog"
+    information={`Explore our articles, guides, and tips on business communication, cloud PBX, and using PBXly to grow your business.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

@@ -1,4 +1,4 @@
-# 🚀 PBXly Website
+# PBXly Website
 
 ## About PBXly
 
