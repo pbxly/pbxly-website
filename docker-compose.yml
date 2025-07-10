@@ -1,0 +1,6 @@
+services:
+  pbxly-website:
+    build: .
+    container_name: pbxly-website
+    ports:
+      - 8080:8080
