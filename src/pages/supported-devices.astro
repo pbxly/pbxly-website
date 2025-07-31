@@ -1,0 +1,473 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import { headerData } from '~/navigation';
+
+// Import device images
+import ciscoSpa525g2 from '~/assets/images/devices/cisco-spa525g2.png';
+import ciscoSpa303 from '~/assets/images/devices/cisco-spa303.png';
+import grandstreamGxp2160 from '~/assets/images/devices/grandstream-gxp2160.webp';
+import grandstreamGxp1620 from '~/assets/images/devices/grandstream-gxp1620.png';
+import grandstreamGxp1625 from '~/assets/images/devices/grandstream-gxp1625.png';
+import grandstreamHt801 from '~/assets/images/devices/grandstream-ht801.png';
+import grandstreamHt802 from '~/assets/images/devices/grandstream-ht802.jpg';
+import linksysPap2t from '~/assets/images/devices/linksys-pap2t.png';
+import yealinkT19 from '~/assets/images/devices/yealink-t19.png';
+import chooseDeviceImg from '~/assets/images/choose-device.png';
+
+const metadata = {
+  title: 'Supported Devices - PBXly Compatible Hardware',
+  description: 'Discover the wide range of VoIP phones and devices compatible with PBXly PBX platform. From desk phones to analog adapters.',
+};
+
+const devices = [
+  {
+    category: 'Cisco IP Phones',
+    items: [
+      {
+        name: 'Cisco SPA 525G2',
+        type: 'Business-Grade VoIP Phone',
+        image: ciscoSpa525g2,
+        features: [
+          '5 independent lines with LED buttons',
+          '3.2″ QVGA color LCD (320×240)',
+          'HD wideband audio (G.711, G.722, G.726, G.729AB)',
+          'Bluetooth & 2.5mm wired headset support',
+          '802.11g Wi-Fi with WPS',
+          'Dual 10/100 Ethernet ports with PoE',
+          'USB 2.0 host for multimedia',
+          'VPN Client (AnyConnect) support'
+        ],
+        description: 'Business-grade VoIP desk phone tailored for small- to mid-sized enterprises with advanced multimedia capabilities and flexible connectivity options.',
+        useCase: 'SMB front desk, office worker, remote user needing mobility and features'
+      },
+      {
+        name: 'Cisco SPA303',
+        type: '3-Line SIP IP Phone',
+        image: ciscoSpa303,
+        features: [
+          '3 lines, up to 6 call appearances',
+          '128×64 monochrome LCD with soft keys',
+          'Full duplex speakerphone with wideband audio',
+          'G.711 µ/a, G.726, G.729AB, G.722 codecs',
+          '2× 10/100 Mbps Ethernet ports',
+          '2.5mm wired headset jack',
+          'SIP and SPCP protocol support',
+          'Remote and web-based configuration'
+        ],
+        description: '3-line SIP-based IP phone designed for straightforward installations and dependable business communication without unnecessary complexity.',
+        useCase: 'Everyday office use with essential telephony features'
+      }
+    ]
+  },
+  {
+    category: 'Grandstream IP Phones',
+    items: [
+      {
+        name: 'Grandstream GXP2160',
+        type: 'Enterprise-Grade VoIP Phone',
+        image: grandstreamGxp2160,
+        features: [
+          '6 lines, 6 SIP accounts',
+          '4.3″ TFT color LCD (480×272)',
+          '24 dual-color BLF/speed-dial keys',
+          'Up to 5-party local conferencing',
+          'G.711, G.722, G.729A/B, G.723.1, G.726, iLBC, Opus',
+          '2× Gigabit RJ45 with PoE passthrough',
+          'Bluetooth v2.1 for contacts/headsets',
+          'USB for import/export data',
+          'TR‑069, encrypted XML provisioning'
+        ],
+        description: 'High-end, enterprise-grade VoIP desk phone ideal for users managing moderate to heavy call volumes in SMB and corporate settings.',
+        useCase: 'Reception, manager desks, office operators'
+      },
+      {
+        name: 'Grandstream GXP1620',
+        type: 'Standard IP Phone',
+        image: grandstreamGxp1620,
+        features: [
+          '2 SIP accounts, 2 line keys',
+          '132×48 backlit LCD (~2.95")',
+          '3 XML-programmable soft keys',
+          '3-way local conferencing',
+          'HD wideband audio, full-duplex speakerphone',
+          'G.711, G.722, G.729AB, G.726, G.723, iLBC',
+          'RJ9 port, EHS for Plantronics headsets',
+          '2× auto-sensing 10/100 Mbps Ethernet',
+          'TR-069, encrypted XML provisioning'
+        ],
+        description: 'Straightforward and reliable IP phone ideal for users with light to medium call volumes, offering essential business features.',
+        useCase: 'Small offices, light to moderate call volumes'
+      },
+      {
+        name: 'Grandstream GXP1625',
+        type: 'PoE-Enabled IP Phone',
+        image: grandstreamGxp1625,
+        features: [
+          '2 SIP accounts, 2 line appearances',
+          '132 × 48 backlit graphical LCD (~2.95″)',
+          '3 XML-programmable soft keys',
+          '3‑way local audio conferencing',
+          'G.711, G.722, G.723, G.726, G.729 A/B, iLBC',
+          'Full‑duplex speakerphone with echo cancellation',
+          '2× 10/100 Mbps + integrated PoE',
+          'RJ9 + EHS Plantronics headset support',
+          'Up to 1000 contacts, 200 call logs'
+        ],
+        description: 'Part of the GXP1600 series, tailored for small offices or remote workers with integrated PoE for network-powered operation.',
+        useCase: 'Small offices, remote workers, light to moderate call volumes'
+      }
+    ]
+  },
+  {
+    category: 'Analog Telephone Adapters',
+    items: [
+      {
+        name: 'Grandstream HT801',
+        type: 'Single-Port FXS ATA',
+        image: grandstreamHt801,
+        features: [
+          '1 × FXS (RJ11) port',
+          'G.711, G.722, G.723.1, G.726‑32, G.729A/B, iLBC, Opus',
+          'T.38 fax up to 14.4 kbps + G.711 fallback',
+          'Caller ID, call waiting, hold, forward, transfer',
+          '3‑way conference, DND support',
+          'Up to 5 REN ring load, ~1 km on 24 AWG',
+          'TLS, SRTP, encrypted provisioning',
+          'TR‑069, encrypted XML, SSH/Telnet'
+        ],
+        description: 'Single-port FXS analog telephone adapter that connects legacy analog phones or fax machines to VoIP networks via SIP.',
+        useCase: 'Home users, small offices, single-line analog integration'
+      },
+      {
+        name: 'Grandstream HT802',
+        type: 'Dual-Port FXS ATA',
+        image: grandstreamHt802,
+        features: [
+          '2 × RJ‑11 FXS ports for phones or fax',
+          'G.711, G.722, G.723.1, G.729A/B, G.726, iLBC, Opus',
+          'T.38 Fax (Group 3) with G.711 fallback',
+          'Call waiting, transfer, forward, hold, DND, conference',
+          'Caller ID (Bellcore, ETSI, BT, NTT, DTMF)',
+          '2 REN ring load, up to 1 km on 24 AWG',
+          'TLS/SIPS control, SRTP media, HTTPS, SSH',
+          'Enhanced v2: Faster CPU, 2× RAM, 8× flash, FEC support'
+        ],
+        description: 'Compact 2‑port analog telephone adapter that integrates two analog phones or fax machines into SIP-based VoIP networks.',
+        useCase: 'Home, teleworker, small office environments'
+      },
+      {
+        name: 'Linksys PAP2T',
+        type: 'Legacy Dual-Port ATA',
+        image: linksysPap2t,
+        features: [
+          '2 independent analog FXS ports',
+          '10/100 Mbps RJ‑45 auto-sensing',
+          'SIP v2, RFC‑3261 compliant',
+          'G.711, G.726, G.729A, G.723.1 codecs',
+          'Caller ID, forwarding, conferencing, speed‑dial',
+          'Web GUI, IVR menu, remote provisioning',
+          'FCC, CE, cUL certifications',
+          'Compact: 101 × 101 × 15 mm, ~140g'
+        ],
+        description: 'Compact VoIP ATA connecting two analog phones or fax machine to broadband Internet via SIP. Note: End-of-life since 2012.',
+        useCase: 'Basic analog‑to‑IP deployments (legacy support only)',
+        status: 'Obsolete (EoL since 2012)'
+      }
+    ]
+  },
+  {
+    category: 'Entry-Level IP Phones',
+    items: [
+      {
+        name: 'Yealink SIP‑T19P E2',
+        type: 'Cost-Effective Single-Line Phone',
+        image: yealinkT19,
+        features: [
+          '1 SIP account, single line',
+          '132×64 graphical LCD (5-line view)',
+          '29 keys including 4 soft keys',
+          'G.722 (HD), G.711, G.729AB, G.726, iLBC',
+          'Full-duplex speakerphone with AEC, PLC, AGC',
+          '2 × 10/100 Mbps (PC pass-through + PoE)',
+          'FTP/TFTP/HTTP/HTTPS, encrypted XML, TR‑069',
+          'TLS/SRTP, VLAN, STUN, IPv6 security'
+        ],
+        description: 'Cost-effective single-line VoIP phone with surprisingly rich feature set, ideal for small businesses and remote office deployments.',
+        useCase: 'Small businesses, remote offices, basic telephony needs'
+      }
+    ]
+  }
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Hardware Compatibility"
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Get Started', href: '/contact' },
+      { text: 'View All Devices', href: '#devices' },
+    ]}
+    image={{
+      src: grandstreamGxp2160,
+      alt: 'PBXly Supported Devices',
+    }}
+  >
+    <Fragment slot="title">
+      Compatible VoIP Devices<br />
+      for <span class="text-accent dark:text-white">PBXly PBX Platform</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        PBXly supports a wide range of VoIP phones, analog adapters, and communication devices.</span>
+      Choose from leading manufacturers like Cisco, Grandstream, Yealink, and Linksys for seamless integration.
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="compatibility"
+    title="Why Choose PBXly Compatible Devices?"
+    subtitle="Our certified devices ensure optimal performance and seamless integration."
+    columns={3}
+    items={[
+      {
+        title: 'Plug & Play Setup',
+        description: 'Auto-provisioning and zero-touch deployment for quick installation and configuration.',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'HD Voice Quality',
+        description: 'Crystal-clear audio with wideband codec support for professional communication.',
+        icon: 'tabler:volume',
+      },
+      {
+        title: 'Advanced Features',
+        description: 'Support for call transfer, conferencing, presence, and other enterprise features.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Remote Management',
+        description: 'Centralized device management and configuration through PBXly admin portal.',
+        icon: 'tabler:device-desktop-analytics',
+      },
+      {
+        title: 'Firmware Updates',
+        description: 'Automatic firmware updates ensure security and feature compatibility.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Technical Support',
+        description: '24/7 support for device configuration, troubleshooting, and optimization.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+
+  <!-- Device Categories Content **************** -->
+
+  <div id="devices" class="mx-auto max-w-7xl px-6 lg:px-8 py-16">
+    <div class="mx-auto max-w-2xl text-center mb-16">
+      <h2 class="text-base font-semibold leading-7 text-accent">Device Catalog</h2>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+        Supported Hardware
+      </p>
+      <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+        Explore our comprehensive range of certified VoIP devices compatible with PBXly PBX platform.
+      </p>
+    </div>
+
+    {devices.map((category, categoryIndex) => (
+      <div class="mb-20">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+          {category.category}
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {category.items.map((device, deviceIndex) => (
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div class="aspect-w-16 aspect-h-12 bg-gray-100 dark:bg-gray-700">
+                <img
+                  src={device.image.src}
+                  alt={device.name}
+                  class="w-full h-48 object-contain p-4"
+                />
+              </div>
+              
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-3">
+                  <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    {device.name}
+                  </h4>
+                  <div class="flex flex-col gap-1">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent/10 text-accent">
+                      {device.type}
+                    </span>
+                    {device.status && (
+                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400">
+                        {device.status}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                
+                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                  {device.description}
+                </p>
+
+                {device.useCase && (
+                  <div class="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                    <h6 class="font-medium text-blue-900 dark:text-blue-300 text-xs mb-1">Ideal Use Case:</h6>
+                    <p class="text-blue-800 dark:text-blue-400 text-xs">{device.useCase}</p>
+                  </div>
+                )}
+                
+                <div class="space-y-2">
+                  <h5 class="font-medium text-gray-900 dark:text-white text-sm">Key Features:</h5>
+                  <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1 max-h-48 overflow-y-auto">
+                    {device.features.map((feature, featureIndex) => (
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="text-xs leading-relaxed">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Getting Started Content **************** -->
+
+  <Content
+    title="Getting Started with PBXly Devices"
+    subtitle="Simple steps to connect your compatible devices to PBXly PBX platform."
+    isReversed
+    items={[
+      {
+        title: 'Step 1: Choose Your Device',
+        description: 'Select from our certified device catalog based on your business needs and budget requirements.',
+      },
+      {
+        title: 'Step 2: Auto-Provisioning',
+        description: 'Connect your device to the network and let PBXly automatically configure the settings.',
+      },
+      {
+        title: 'Step 3: Start Calling',
+        description: 'Begin making and receiving calls immediately with full PBX features activated.',
+      },
+    ]}
+    image={{
+      src: chooseDeviceImg, //
+      alt: 'PBXly Device Setup',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Quick Setup Process
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Device Categories Features **************** -->
+
+  <div class="bg-gray-50 dark:bg-gray-900 py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center mb-12">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Device Categories
+        </h2>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+          Find the perfect device type for your specific business requirements.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="mx-auto h-16 w-16 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">IP Desk Phones</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Professional desk phones with advanced features for office environments.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mx-auto h-16 w-16 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Analog Adapters</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Connect traditional analog phones and fax machines to VoIP networks.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mx-auto h-16 w-16 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Conference Phones</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">High-quality speakerphones for meeting rooms and conference calls.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="mx-auto h-16 w-16 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+            <svg class="h-8 w-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Mobile Apps</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Softphone applications for smartphones and tablets with full PBX features.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact CTA **************** -->
+
+  <div class="bg-blue-800 py-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-white">
+          Need Help Choosing the Right Device?
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-white/90">
+          Our experts can help you select the perfect devices for your business needs and ensure seamless integration with PBXly.
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a
+            href="/contact"
+            class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-accent shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            Contact Sales
+          </a>
+          <a href="#devices" class="text-sm font-semibold leading-6 text-white">
+            View All Devices <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
